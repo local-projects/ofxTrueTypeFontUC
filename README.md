@@ -2,6 +2,13 @@
 
 ![ofxTrueTypeFontUC Screenshot](http://hironishihara.github.io/ofxTrueTypeFontUC/img/screenshot.png)
 
+
+## Local Projects Fork
+
+Incorporates [UTF32 conversion fixes](https://github.com/hironishihara/ofxTrueTypeFontUC/issues/18#issuecomment-19266646) for Windows, and OF 10 improvements by [watab0shi](https://github.com/watab0shi/ofxTrueTypeFontUC).
+
+This is currently working more reliably for us on Windows than the UTF support now included in OF 10's ofTrueType.
+
 ## Overview
 
 An extension of ofTrueTypeFont class for using UNICODE characters. Tested on OSX, iOS, and Windows.
