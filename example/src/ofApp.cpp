@@ -1,8 +1,8 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup(){
-  myFont.loadFont("dummyFont.ttf", 64, true, true);
+void ofApp::setup(){
+  myFont.load("dummyFont.ttf", 64, true, true);
   
   sampleString = "あいうえお";
   
@@ -18,77 +18,87 @@ void testApp::setup(){
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
-  
+void ofApp::update(){
+
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void ofApp::draw(){
   string fpsStr = "frame rate: " + ofToString(ofGetFrameRate(), 2);
   ofDrawBitmapString(fpsStr, 100, 100);
   
-  ofLine(rect1.getTopLeft(), rect1.getTopRight());
-  ofLine(rect1.getTopRight(), rect1.getBottomRight());
-  ofLine(rect1.getBottomRight(), rect1.getBottomLeft());
-  ofLine(rect1.getBottomLeft(), rect1.getTopLeft());
+  ofDrawLine(rect1.getTopLeft(), rect1.getTopRight());
+  ofDrawLine(rect1.getTopRight(), rect1.getBottomRight());
+  ofDrawLine(rect1.getBottomRight(), rect1.getBottomLeft());
+  ofDrawLine(rect1.getBottomLeft(), rect1.getTopLeft());
   myFont.drawString(sampleString, p1.x, p1.y);
   
-  ofLine(rect2.getTopLeft(), rect2.getTopRight());
-  ofLine(rect2.getTopRight(), rect2.getBottomRight());
-  ofLine(rect2.getBottomRight(), rect2.getBottomLeft());
-  ofLine(rect2.getBottomLeft(), rect2.getTopLeft());
+  ofDrawLine(rect2.getTopLeft(), rect2.getTopRight());
+  ofDrawLine(rect2.getTopRight(), rect2.getBottomRight());
+  ofDrawLine(rect2.getBottomRight(), rect2.getBottomLeft());
+  ofDrawLine(rect2.getBottomLeft(), rect2.getTopLeft());
   myFont.drawStringAsShapes(sampleString, p2.x, p2.y);
   
-  ofLine(rect3.getTopLeft(), rect3.getTopRight());
-  ofLine(rect3.getTopRight(), rect3.getBottomRight());
-  ofLine(rect3.getBottomRight(), rect3.getBottomLeft());
-  ofLine(rect3.getBottomLeft(), rect3.getTopLeft());
+  ofDrawLine(rect3.getTopLeft(), rect3.getTopRight());
+  ofDrawLine(rect3.getTopRight(), rect3.getBottomRight());
+  ofDrawLine(rect3.getBottomRight(), rect3.getBottomLeft());
+  ofDrawLine(rect3.getBottomLeft(), rect3.getTopLeft());
   vector<ofPath>::iterator iter = characters.begin();
   for (; iter != characters.end(); ++iter)
     (*iter).draw(p3.x, p3.y);
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
-  
+void ofApp::keyPressed(int key){
+
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased(int key){
-  
+void ofApp::keyReleased(int key){
+
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
-  
+void ofApp::mouseMoved(int x, int y ){
+
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
-  
+void ofApp::mouseDragged(int x, int y, int button){
+
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
-  
+void ofApp::mousePressed(int x, int y, int button){
+
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
-  
+void ofApp::mouseReleased(int x, int y, int button){
+
 }
 
 //--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
-  
+void ofApp::mouseEntered(int x, int y){
+
 }
 
 //--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
-  
+void ofApp::mouseExited(int x, int y){
+
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){
-  
+void ofApp::windowResized(int w, int h){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessage(ofMessage msg){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo){ 
+
 }
